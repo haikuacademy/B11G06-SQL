@@ -7,14 +7,39 @@ CREATE TABLE users (
 	imageURL VARCHAR(255)
 );
 
--- register
+CREATE TABLE houses (
+	house_id SERIAL PRIMARY KEY,
+	location VARCHAR(50),
+	bedrooms INT,
+	bathrooms INT,
+	price_night INT,
+	description VARCHAR(2500),
+	user_id INT REFERENCES users(user_id) 
+	-- ask if int or serial during references -- 
+);
 
-INSERT INTO users (first_name, last_name, email, password, imageURL)
-VALUES ('Bob', 'Smith', 'bobsmith@gmail.com', '1234BOB', 'https://www.fakepersongenerator.com/Face/male/male20161083948806152.jpg')
+CREATE TABLE bookings (
+	user_id SERIAL REFERENCES users(user_id), -- ask-
+	booking_id SERIAL PRIMARY KEY,
+	price_night INT,
+	total_price INT
+);
 
--- Login query 
-SELECT * FROM users
-WHERE email = 'bobsmith@gmail.com' AND password = '1234BOB'
+CREATE TABLE reviews (
+	review_id SERIAL PRIMARY KEY,
+	first_name VARCHAR(50),
+	last_name VARCHAR(50),
+	review_description VARCHAR(2500),
+	star_rating FLOAT,
+	review_date DATE,
+	user_id INT REFERENCES users(user_id), -- asks--
+	house_id INT REFERENCES houses(house_id)
 
-6 files 
-1. Create 
+);
+
+CREATE TABLE house_photos (
+	photo_id SERIAL PRIMARY KEY,
+	house_id INT REFERENCES houses(house_id),
+	photo_url imageURL VARCHAR(255),
+	feature_photo BOOLEAN,
+);
