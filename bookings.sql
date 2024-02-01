@@ -1,4 +1,4 @@
---inserting into bookings table
+--inserting data into bookings table
 INSERT INTO bookings (price_night, booking_date, message, total_price, user_id)
 VALUES 
 	(250, '2024-12-20', 'hello there!', 500, 2),
