@@ -21,7 +21,7 @@ CREATE TABLE houses (
 CREATE TABLE bookings (
 	user_id INT REFERENCES users(user_id), 
 	booking_id SERIAL PRIMARY KEY,
-	price_night INT NOT NULL,
+	price_night INT REFERENCES houses(price_night),
 	booking_date DATE,
 	message VARCHAR(250),
 	total_price INT NOT NULL
