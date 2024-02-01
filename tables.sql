@@ -44,8 +44,3 @@ CREATE TABLE house_photos (
 	feature_photo BOOLEAN
 
 );
-
-
-
-
-
