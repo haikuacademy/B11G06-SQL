@@ -18,7 +18,6 @@ VALUES
 ('Phuket, Thailand', 2, 2, 120, 'Description', 1234),
 ('Bali, Indonesia', 3, 2, 190, 'Description', 1234),
 ('Koh Samui, Thailand', 4, 5, 380, 'Description', 1234),
-('Koh Phangan, Thailand', 2, 2,80, 'Description', 1234),
 ('Phuket, Thailand', 3, 2, 190, 'Description', 1234),
 ('Ubud, Indonesia', 1, 1, 50, 'Description', 1234),
 ('Lombok, Indonesia', 4, 5, 400, 'Description', 1234),
