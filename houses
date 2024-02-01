@@ -20,6 +20,7 @@ VALUES
 SELECT house.house_id, house.location, house.bedrooms, house.bathrooms, house.description, users.first_name, users.last_name
 FROM houses
 LEFT JOIN users
+ON houses.user_id = users.user_id
 
 
 ----- Update house
