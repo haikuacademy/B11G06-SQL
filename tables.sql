@@ -1,5 +1,5 @@
 CREATE TABLE users (
-	user_id SERIAL PRIMARY KEY NOT NULL,
+	user_id SERIAL PRIMARY KEY,
 	first_name VARCHAR(50) NOT NULL,
 	last_name VARCHAR(50) NOT NULL,
 	email VARCHAR(100) NOT NULL,
@@ -8,7 +8,7 @@ CREATE TABLE users (
 );
 
 CREATE TABLE houses (
-	house_id SERIAL PRIMARY KEY NOT NULL,
+	house_id SERIAL PRIMARY KEY,
 	location VARCHAR(50) NOT NULL,
 	bedrooms INT NOT NULL,
 	bathrooms INT NOT NULL,
@@ -22,11 +22,13 @@ CREATE TABLE bookings (
 	user_id SERIAL REFERENCES users(user_id), 
 	booking_id SERIAL PRIMARY KEY NOT NULL,
 	price_night INT NOT NULL,
+	booking_date DATE,
+	message VARCHAR(250),
 	total_price INT NOT NULL
 );
 
 CREATE TABLE reviews (
-	review_id SERIAL PRIMARY KEY NOT NULL,
+	review_id SERIAL PRIMARY KEY,
 	first_name VARCHAR(50) NOT NULL,
 	last_name VARCHAR(50) NOT NULL,
 	review_description VARCHAR(2500) NOT NULL,
@@ -38,7 +40,7 @@ CREATE TABLE reviews (
 );
 
 CREATE TABLE house_photos (
-	photo_id SERIAL PRIMARY KEY NOT NULL,
+	photo_id SERIAL PRIMARY KEY,
 	house_id INT REFERENCES houses(house_id),
 	house_photosURL VARCHAR(255),
 	feature_photo BOOLEAN
