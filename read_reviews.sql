@@ -1,4 +1,7 @@
-SELECT 
+SELECT
+    users.profile_pictureURL,
+    users.first_name,
+    users.last_name,
 	reviews.review_date, 
 	reviews.house_id, 
 	reviews.user_id, 
