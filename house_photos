@@ -1,10 +1,3 @@
-CREATE TABLE house_photos (
-    photo_id SERIAL PRIMARY KEY,
-    house_id INT REFERENCES houses(house_id),
-    house_photosURL VARCHAR(255),
-    feature_photo BOOLEAN
-);
-
 --- Photos list
 
 INSERT INTO house_photos (house_id, house_photosURL, feature_photo)
