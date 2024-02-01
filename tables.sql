@@ -19,7 +19,8 @@ CREATE TABLE houses (
 );
 
 CREATE TABLE bookings (
-	user_id INT REFERENCES users(user_id), 
+	user_id INT REFERENCES users(user_id),
+	house_id INT REFERENCES houses(house_id),
 	booking_id SERIAL PRIMARY KEY,
 	price_night INT REFERENCES houses(price_night),
 	booking_date DATE,
