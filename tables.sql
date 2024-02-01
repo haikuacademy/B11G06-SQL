@@ -4,7 +4,7 @@ CREATE TABLE users (
 	last_name VARCHAR(50) NOT NULL,
 	email VARCHAR(100) NOT NULL,
 	password VARCHAR(50) NOT NULL,
-	imageURL VARCHAR(255)
+	profile_pictureURL VARCHAR(255)
 );
 
 CREATE TABLE houses (
@@ -40,8 +40,12 @@ CREATE TABLE reviews (
 CREATE TABLE house_photos (
 	photo_id SERIAL PRIMARY KEY NOT NULL,
 	house_id INT REFERENCES houses(house_id),
-	photo_url_imageURL VARCHAR(255),
+	house_photosURL VARCHAR(255),
 	feature_photo BOOLEAN
 
 );
+
+
+
+
 
