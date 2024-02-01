@@ -20,7 +20,7 @@ CREATE TABLE houses (
 
 CREATE TABLE bookings (
 	user_id INT REFERENCES users(user_id), 
-	booking_id SERIAL PRIMARY KEY NOT NULL,
+	booking_id SERIAL PRIMARY KEY,
 	price_night INT NOT NULL,
 	booking_date DATE,
 	message VARCHAR(250),
@@ -29,8 +29,6 @@ CREATE TABLE bookings (
 
 CREATE TABLE reviews (
 	review_id SERIAL PRIMARY KEY,
-	first_name VARCHAR(50) NOT NULL,
-	last_name VARCHAR(50) NOT NULL,
 	review_description VARCHAR(2500) NOT NULL,
 	star_rating FLOAT,
 	review_date DATE,
