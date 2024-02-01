@@ -8,5 +8,11 @@ VALUES
 
 
 
+SELECT houses.house_photoURL, houses.location, houses.bedrooms, houses.bathrooms, houses.price_night, houses.total_price, bookings.booking_date
+FROM bookings
+LEFT JOIN houses	
+ON houses.user_id = bookings.user_id
+
+
 
 
