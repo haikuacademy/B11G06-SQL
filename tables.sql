@@ -15,11 +15,11 @@ CREATE TABLE houses (
 	price_night INT NOT NULL,
 	description VARCHAR(2500) NOT NULL,
 	user_id INT REFERENCES users(user_id) 
-	-- ask if int or serial during references -- 
+	
 );
 
 CREATE TABLE bookings (
-	user_id SERIAL REFERENCES users(user_id), -- ask-
+	user_id SERIAL REFERENCES users(user_id), 
 	booking_id SERIAL PRIMARY KEY NOT NULL,
 	price_night INT NOT NULL,
 	total_price INT NOT NULL
@@ -32,7 +32,7 @@ CREATE TABLE reviews (
 	review_description VARCHAR(2500) NOT NULL,
 	star_rating FLOAT,
 	review_date DATE,
-	user_id INT REFERENCES users(user_id), -- asks--
+	user_id INT REFERENCES users(user_id), 
 	house_id INT REFERENCES houses(house_id)
 
 );
@@ -40,6 +40,8 @@ CREATE TABLE reviews (
 CREATE TABLE house_photos (
 	photo_id SERIAL PRIMARY KEY NOT NULL,
 	house_id INT REFERENCES houses(house_id),
-	photo_url imageURL VARCHAR(255),
-	feature_photo BOOLEAN,
+	photo_url_imageURL VARCHAR(255),
+	feature_photo BOOLEAN
+
 );
+
