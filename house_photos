@@ -29,3 +29,9 @@ VALUES
 UPDATE house_photos
 SET house_photosURL = 'https://generatorfun.com/code/uploads/Random-House-image-5.jpg'
 WHERE photo_id = 1;
+
+
+---- Read photos
+
+SELECT house_photosURL FROM house_photos  
+WHERE house_id = 1;
