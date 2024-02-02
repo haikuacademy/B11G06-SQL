@@ -33,5 +33,5 @@ WHERE photo_id = 1;
 
 ---- Read photos
 
-SELECT house_photosURL FROM house_photos  
-WHERE house_id = 1;
+SELECT * FROM house_photos  
+WHERE photo_id = 1;
