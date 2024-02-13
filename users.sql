@@ -10,7 +10,9 @@ VALUES (Bob, Sponge, bob.sponge@gmail.com, 123456, https://randomuser.me/api/por
 SELECT email, password FROM users
 
 --USERS read profile
-SELECT profile_picture, first_name, last_name, email FROM users
+SELECT first_name, last_name, email, profile_picture FROM users
 
 --USERS update profile
-UPDATE profile_picture, first_name, last_name; email FROM USERS
+UPDATE users
+SET first_name = '', last_name = '', email = '', profile_picture = ''
+WHERE user_id = 
