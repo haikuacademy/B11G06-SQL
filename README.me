@@ -1,3 +1,24 @@
 - Jose
 - Ana
 - Silvia
+
+/*CREATE TABLE users (
+    user_id SERIAL PRIMARY KEY,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    password VARCHAR(50) NOT NULL,
+    profile_pictureURL VARCHAR(255)
+)
+CREATE TABLE bookings (
+    booking_id SERIAL PRIMARY KEY,
+    user_id INT REFERENCES users(user_id) NOT NULL,
+    house_id INT REFERENCES houses(house_id) NOT NULL,
+    price_night INT REFERENCES houses(price_night) NOT NULL,
+    checkin_date DATE NOT NULL,
+    checkout_date DATE NOT NULL,
+    message VARCHAR(250),
+    total_price INT NOT NULL
+);
+*/
+
